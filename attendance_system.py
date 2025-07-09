@@ -222,10 +222,10 @@ def main():
     """Main function with scheduler"""
     logger.info("Starting Attendance System Scheduler")
     
-    # Schedule job to run daily at 12:30 PM
-    schedule.every().day.at("12:30").do(job)
+    # Schedule job to run daily at 12:40 PM
+    schedule.every().day.at("12:40").do(job)
     
-    logger.info("Scheduler configured to run daily at 12:30 PM")
+    logger.info("Scheduler configured to run daily at 12:40 PM")
     
     # For testing, you can run immediately
     if os.getenv('RUN_IMMEDIATELY', 'false').lower() == 'true':

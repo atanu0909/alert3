@@ -1,6 +1,6 @@
 # Daily Attendance System
 
-This system automatically generates daily attendance reports and sends them via email at 12:30 PM daily.
+This system automatically generates daily attendance reports and sends them via email at 12:40 PM daily.
 
 ## Features
 
@@ -13,11 +13,7 @@ This system automatically generates daily attendance reports and sends them via 
 ## Setup Instructions
 
 ### 1. Database Setup
-The system connects to your SQL Server database with the following details:
-- Server: 1.22.45.168:19471
-- Database: etimetrackliteWEB
-- Username: sa
-- Password: sa@123
+The system connects to your SQL Server database. Database connection details are configured via environment variables for security.
 
 ### 2. Email Configuration
 You need to configure email settings for sending reports:
@@ -36,13 +32,13 @@ You need to configure email settings for sending reports:
 3. Add the following secrets:
 
 ```
-DB_SERVER=1.22.45.168:19471
-DB_NAME=etimetrackliteWEB
-DB_USERNAME=sa
-DB_PASSWORD=sa@123
+DB_SERVER=your_database_server
+DB_NAME=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
 EMAIL_FROM=your_email@gmail.com
 EMAIL_PASSWORD=your_gmail_app_password
-EMAIL_TO=aghosh09092004@gmail.com
+EMAIL_TO=recipient@email.com
 SMTP_SERVER=smtp.gmail.com
 SMTP_PORT=587
 ```
@@ -94,7 +90,7 @@ The system expects the following tables in your database:
 
 3. **Email Delivery**: Sends the report via email to the specified recipient
 
-4. **Scheduling**: GitHub Actions runs the system daily at 12:30 PM UTC
+4. **Scheduling**: GitHub Actions runs the system daily at 12:40 PM UTC
 
 ## Customization
 

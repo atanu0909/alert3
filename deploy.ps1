@@ -31,13 +31,13 @@ Write-Host "Next steps:" -ForegroundColor Cyan
 Write-Host "1. Go to https://github.com/atanu0909/alert3"
 Write-Host "2. Navigate to Settings > Secrets and variables > Actions"
 Write-Host "3. Add the following secrets:" -ForegroundColor Yellow
-Write-Host "   - DB_SERVER=1.22.45.168:19471"
-Write-Host "   - DB_NAME=etimetrackliteWEB"
-Write-Host "   - DB_USERNAME=sa"
-Write-Host "   - DB_PASSWORD=sa@123"
+Write-Host "   - DB_SERVER=your_database_server"
+Write-Host "   - DB_NAME=your_database_name"
+Write-Host "   - DB_USERNAME=your_database_username"
+Write-Host "   - DB_PASSWORD=your_database_password"
 Write-Host "   - EMAIL_FROM=your_email@gmail.com"
 Write-Host "   - EMAIL_PASSWORD=your_gmail_app_password"
-Write-Host "   - EMAIL_TO=aghosh09092004@gmail.com"
+Write-Host "   - EMAIL_TO=recipient@email.com"
 Write-Host "   - SMTP_SERVER=smtp.gmail.com"
 Write-Host "   - SMTP_PORT=587"
-Write-Host "4. The system will automatically run daily at 12:30 PM UTC" -ForegroundColor Green
+Write-Host "4. The system will automatically run daily at 12:40 PM UTC" -ForegroundColor Green

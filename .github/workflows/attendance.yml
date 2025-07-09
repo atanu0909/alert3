@@ -3,8 +3,8 @@ name: Daily Attendance Report
 
 on:
   schedule:
-    # Run daily at 12:30 PM UTC (adjust timezone as needed)
-    - cron: '30 12 * * *'
+    # Run daily at 12:40 PM UTC (adjust timezone as needed)
+    - cron: '40 12 * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
