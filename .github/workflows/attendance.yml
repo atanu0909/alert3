@@ -24,10 +24,11 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y unixodbc-dev
-        curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-        curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+        # Install Microsoft ODBC Driver
+        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
         sudo apt-get update
-        sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
+        sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
     
     - name: Install Python dependencies
       run: |
@@ -52,7 +53,14 @@ jobs:
         python attendance_system.py
     
     - name: Upload logs (if any)
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: attendance-logs
+        path: |
+          *.log
+          *.xlsx
+        retention-days: 7
       if: always()
       with:
         name: attendance-logs
